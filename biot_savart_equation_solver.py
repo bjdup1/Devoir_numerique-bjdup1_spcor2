@@ -53,5 +53,5 @@ class BiotSavartEquationSolver:
                             theta_2 = np.arctan((np.abs(y_mag-y_cour) + 0.5)/r)
                             I = ((x_cour - x_mag)/r) * electric_current[x_cour, y_cour, 1]
                             magnetic_field[x_mag, y_mag, 2] += ((np.sin(theta_2)-np.sin(theta_1)) * I )/r
-            print("{:.2f}".format((x_cour + 1)/(len(magnetic_field))* 100),"%","complété")                   # Affiche la progression approximative
+            #print("{:.2f}".format((x_cour + 1)/(len(magnetic_field))* 100),"%","complété")                   # Affiche la progression approximative
         return VectorField(magnetic_field * (mu_0/(4*pi)))
